@@ -1,0 +1,10 @@
+<div class="button-panel">
+  <div class="row" *ngFor="let row of btnCollection; let x = index; let last = last">
+    <div *ngFor="let btn of row; let y = index; let first = first" class="btn-container">
+        <div *ngIf="first" class="row-num">{{btnCollection.length-x}}</div>
+        <button (click)="toggleStatus(x, y, $event.target)" mat-flat-button color="{{btn.status === 'ON' ? 'primary' : 'accent'}}">{{btn.status}}</button>
+        <div *ngIf="last" class="col-num">{{y+1}}</div>
+    </div>
+  </div>
+
+</div>

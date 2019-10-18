@@ -1,0 +1,19 @@
+<form class="manual-override-form" [formGroup]="btnForm" (ngSubmit)="updateBtn()">
+  <div class="coordinates">
+    <mat-form-field appearance="outline">
+      <mat-label>X-Value</mat-label>
+      <input matInput placeholder="value" type="number" formControlName="x">
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Y-Value</mat-label>
+      <input matInput placeholder="value" type="number" formControlName="y">
+    </mat-form-field>
+  </div>
+
+
+  <mat-slide-toggle class="status-toggle" color="primary" [checked]="checked" (change)="checked = $event.checked">
+    {{checked ? 'ON' : 'OFF'}}
+  </mat-slide-toggle>
+
+  <button mat-flat-button color="accent" type="Submit">Confirm</button>
+</form>

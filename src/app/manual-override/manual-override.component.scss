@@ -1,0 +1,30 @@
+.manual-override-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .coordinates {
+    display: flex;
+    justify-content: space-around;
+
+    >* {
+      padding: 20px;
+    }
+
+    .mat-form-field {
+      width: 120px;
+    }
+  }
+
+  .status-toggle {
+    padding: 0 0 20px 0;
+  }
+  .mat-accent .mat-slider-track-fill {
+    background: red!important;
+  }
+
+  button {
+    width: 100%;
+  }
+}

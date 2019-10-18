@@ -1,0 +1,32 @@
+.button-panel {
+  display: flex;
+  flex-direction: column;
+
+  >.row {
+    display: flex;
+    flex-wrap: wrap;
+
+    .btn-container {
+      padding: 5px;
+      button {
+        width: 60px;
+        height: 50px;
+        font-size: 18px;
+      }
+    }
+
+    .row-num {
+      display: inline;
+      padding-right: 10px;
+      color: gray;
+    }
+    .col-num {
+      &:not(:first-of-type) {
+        margin-left: 20px;
+      }
+      text-align: center;
+      padding-top: 10px;
+      color: gray;
+    }
+  }
+}
